@@ -330,7 +330,7 @@ char	*for_bits(wint_t ch, t_param *a)
 	}
 	if (j <= 7 )
 	{
-		buf[0] = ch & 0x07f;
+		buf[0] = ch & 0xff;
 		if (a->type == 'C' || a->type == 'c')
 		{
 			g_iter++;
