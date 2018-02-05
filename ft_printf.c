@@ -311,25 +311,26 @@ char	*for_bits(wint_t ch, t_param *a)
 	{
 		j++;
 		i = i / 2;
+
 	}
 	j = 32 - j;
-	// if (MB_CUR_MAX == 1 && j > 7)
-	// {
-	// 	g_rr = -1;
-	// 	j = 8;
-	// }
-	// else if (MB_CUR_MAX ==2 && j> 11)
-	// 	{g_rr = -1;
-	// 	j = 10;
-	// }
-	// else if (MB_CUR_MAX == 3 && j >16)
-	// {
-	// 	g_rr = -1;
-	// 	j = 15;
-	// }
+	if (MB_CUR_MAX == 1 && j > 7)
+	{
+		g_rr = -1;
+		j = 8;
+	}
+	else if (MB_CUR_MAX ==2 && j> 11)
+		{g_rr = -1;
+		j = 10;
+	}
+	else if (MB_CUR_MAX == 3 && j >16)
+	{
+		g_rr = -1;
+		j = 15;
+	}
 	if (j <= 7 )
 	{
-		buf[0] = ch & 0x7f;
+		buf[0] = ch & 0x07f;
 		if (a->type == 'C' || a->type == 'c')
 		{
 			g_iter++;
