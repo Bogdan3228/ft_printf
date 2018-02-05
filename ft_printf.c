@@ -315,15 +315,19 @@ char	*for_bits(wint_t ch, t_param *a)
 	j = 32 - j;
 	if (MB_CUR_MAX == 1 && j > 7)
 	{
+		printf("mbcurmax = %d\n", MB_CUR_MAX);
 		g_rr = -1;
 		j = 1;
 	}
 	else if (MB_CUR_MAX ==2 && j> 11)
-		{g_rr = -1;
+	{
+		printf("mbcurmax = %d\n", MB_CUR_MAX);
+		g_rr = -1;
 		j = 1;
 	}
 	else if (MB_CUR_MAX == 3 && j >16)
 	{
+		printf("mbcurmax = %d\n", MB_CUR_MAX);
 		g_rr = -1;
 		j = 1;
 	}
