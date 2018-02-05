@@ -316,7 +316,7 @@ char	*for_bits(wint_t ch, t_param *a)
 	if (MB_CUR_MAX == 1 && j > 7)
 	{
 		printf("mbcurmax = %d\n", MB_CUR_MAX);
-		printf("%U\n",ch );
+		printf("%d\n",ch );
 		g_rr = -1;
 		j = 1;
 	}
