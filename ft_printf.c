@@ -320,12 +320,12 @@ char	*for_bits(wint_t ch, t_param *a)
 	}
 	else if (MB_CUR_MAX ==2 && j> 11)
 		{g_rr = -1;
-		j = 6;
+		j = 8;
 	}
 	else if (MB_CUR_MAX == 3 && j >16)
 	{
 		g_rr = -1;
-		j = 6;
+		j = 12;
 	}
 	if (j <= 7 )
 	{
