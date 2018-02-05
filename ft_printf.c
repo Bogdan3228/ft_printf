@@ -317,7 +317,7 @@ char	*for_bits(wint_t ch, t_param *a)
 	if (MB_CUR_MAX == 1 && j > 7)
 	{
 		g_rr = -1;
-		j = 8;
+		j = 6;
 	}
 	else if (MB_CUR_MAX ==2 && j> 11)
 		{g_rr = -1;
