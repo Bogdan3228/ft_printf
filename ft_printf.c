@@ -316,16 +316,16 @@ char	*for_bits(wint_t ch, t_param *a)
 	if (MB_CUR_MAX == 1 && j > 7)
 	{
 		g_rr = -1;
-		j = 6;
+		j = 1;
 	}
 	else if (MB_CUR_MAX ==2 && j> 11)
 		{g_rr = -1;
-		j = 8;
+		j = 1;
 	}
 	else if (MB_CUR_MAX == 3 && j >16)
 	{
 		g_rr = -1;
-		j = 12;
+		j = 1;
 	}
 	if (j <= 7 )
 	{
