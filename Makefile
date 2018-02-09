@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 HEADER = libft.h ft_printf.h
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra 
 
 SRC = ft_printf.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
@@ -45,6 +45,6 @@ fclean: clean
 re: fclean all
 
 %.o: %.c $(HEADER)
-	@gcc -c $< -o $@
+	@ gcc $(CFLAGS) -c $< -o $@
 
 .PHONY: all clean fclean re
